@@ -39,7 +39,7 @@ function Calcular() {
   };
 
   return (
-    <div className='min-h-screen bg-gray-100 flex flex-col justify-center items-center'>
+    <div className='min-h-screen p-9 bg-gray-100 flex flex-col justify-center items-center'>
       <form
         className='bg-white shadow-md rounded px-8 pt-6 pb-8 mb-4'
         onSubmit={handleSubmit}
