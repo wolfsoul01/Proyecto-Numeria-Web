@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { Transition } from "@headlessui/react";
-import Numeria from "../assets/Numeria.svg";
+import Numeria from "../assets/N.png";
 import { NavLink  } from "react-router-dom";
 import { FaGithub } from "react-icons/fa";
 const Navbar = () => {

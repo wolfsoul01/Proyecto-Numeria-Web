@@ -16,7 +16,7 @@ function Calcular() {
     // Resultado de ejemplo cuando calculamos por Bicepccion ;)
     setResultsArray([
       {
-        col1: "1523",
+        col1: "1",
         col2: "22",
         col3: "3534",
         col4: "423",
@@ -26,7 +26,7 @@ function Calcular() {
         col8: "8123123123123123",
       },
       {
-        col1: "123",
+        col1: "2",
         col2: "223",
         col3: "2343",
         col4: "423",
