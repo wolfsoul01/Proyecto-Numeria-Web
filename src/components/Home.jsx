@@ -18,7 +18,7 @@ const Home = () => {
           <br /> ¡Deja una migaja de pan en cada paso!
         </p>
         <NavLink
-          to={"/"}
+          to={"/calcular"}
           className='hover:scale-105 py-4 bg-orange-500 m-5 flex place-items-center hover:bg-gray-700 text-white font-bold px-4 rounded'
         >
           <span className='flex place-items-center'>

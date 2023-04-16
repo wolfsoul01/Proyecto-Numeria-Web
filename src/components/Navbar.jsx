@@ -43,7 +43,7 @@ const Navbar = () => {
               </li>
               <li>
                 <NavLink
-                  to={"/"}
+                  to={"/calcular"}
                   className='text-gray-800 hover:text-orange-500 cursor-pointer select-none'
                 >
                   Calcular
