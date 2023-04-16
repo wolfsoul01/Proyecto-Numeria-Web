@@ -24,7 +24,8 @@ function Calcular() {
         col6: "123",
         col7: "123",
         col8: "8123123123123123",
-      },{
+      },
+      {
         col1: "123",
         col2: "223",
         col3: "2343",
@@ -34,7 +35,6 @@ function Calcular() {
         col7: "7234",
         col8: "812312312312312312312313",
       },
-      
     ]);
   };
 
@@ -78,20 +78,36 @@ function Calcular() {
           </div>
         </div>
         {option === "option1" && (
-          <div className='mb-4'>
-            <label
-              className='block text-gray-700 font-bold mb-2'
-              htmlFor='input1'
-            >
-              Polinomio
-            </label>
-            <input
-              className='shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline'
-              id='input1'
-              type='text'
-              placeholder='Ej:2x^3'
-            />
-          </div>
+          <>
+            <div className='mb-4'>
+              <label
+                className='block text-gray-700 font-bold mb-2'
+                htmlFor='input1'
+              >
+                Polinomio
+              </label>
+              <input
+                className='shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline'
+                id='input1'
+                type='text'
+                placeholder='Ej:2x^3'
+              />
+            </div>
+            <div className='mb-4'>
+              <label
+                className='block text-gray-700 font-bold mb-2'
+                htmlFor='input5'
+              >
+                Evaluar X como:
+              </label>
+              <input
+                className='shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline'
+                id='input5'
+                type='number'
+                placeholder='Ej:2'
+              />
+            </div>
+          </>
         )}
         {option === "option2" && (
           <div>
@@ -169,7 +185,9 @@ function Calcular() {
         <table className='bg-white table-auto mt-8 border-collapse border border-gray-300'>
           <thead>
             <tr>
-              <th className='border border-gray-300 px-4 py-2'>{"Iteración"}</th>
+              <th className='border border-gray-300 px-4 py-2'>
+                {"Iteración"}
+              </th>
               <th className='border border-gray-300 px-4 py-2'>{"a"}</th>
               <th className='border border-gray-300 px-4 py-2'>{"f(a)"}</th>
               <th className='border border-gray-300 px-4 py-2'>{"b"}</th>
