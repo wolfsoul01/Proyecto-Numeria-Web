@@ -1,4 +1,7 @@
 import { useState } from "react";
+import BiseccionInput from "../components/BiseccionInput";
+import FunctionInput from "../components/FunctionInput";
+import TableBiseccion from "../components/TableBiseccion";
 
 function Calcular() {
   const [option, setOption] = useState("");
@@ -78,96 +81,10 @@ function Calcular() {
           </div>
         </div>
         {option === "option1" && (
-          <>
-            <div className='mb-4'>
-              <label
-                className='block text-gray-700 font-bold mb-2'
-                htmlFor='input1'
-              >
-                Polinomio
-              </label>
-              <input
-                className='shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline'
-                id='input1'
-                type='text'
-                placeholder='Ej:2x^3'
-              />
-            </div>
-            <div className='mb-4'>
-              <label
-                className='block text-gray-700 font-bold mb-2'
-                htmlFor='input5'
-              >
-                Evaluar X como:
-              </label>
-              <input
-                className='shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline'
-                id='input5'
-                type='number'
-                placeholder='Ej:2'
-              />
-            </div>
-          </>
+          <FunctionInput></FunctionInput>
         )}
         {option === "option2" && (
-          <div>
-            <div className='mb-4'>
-              <label
-                className='block text-gray-700 font-bold mb-2'
-                htmlFor='input2'
-              >
-                El primer intervalo:
-              </label>
-              <input
-                className='shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline'
-                id='input2'
-                type='number'
-                placeholder='Ej:0'
-              />
-            </div>
-            <div className='mb-4'>
-              <label
-                className='block text-gray-700 font-bold mb-2'
-                htmlFor='input3'
-              >
-                El 2do intervalo:
-              </label>
-              <input
-                className='shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline'
-                id='input3'
-                type='number'
-                placeholder='Ej:1'
-              />
-            </div>
-            <div className='mb-4'>
-              <label
-                className='block text-gray-700 font-bold mb-2'
-                htmlFor='input4'
-              >
-                Ingrese el error:
-              </label>
-              <input
-                className='shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline'
-                id='input4'
-                type='text'
-                placeholder='Ej:0.1'
-              />
-            </div>
-            <div className='mb-4'>
-              <label
-                className='block text-gray-700 font-bold mb-2'
-                htmlFor='input4'
-              >
-                Polinomio:
-              </label>
-              <input
-                className='shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline'
-                id='input4'
-                type='text'
-                placeholder='Ej:2x^3+1'
-              />
-            </div>
-          </div>
+          <BiseccionInput></BiseccionInput>
         )}
         <div className='flex items-center justify-between'>
           <button
@@ -182,52 +99,7 @@ function Calcular() {
         </div>
       </form>
       {option === "option2" && resultsArray.length > 0 && (
-        <table className='bg-white table-auto mt-8 border-collapse border border-gray-300'>
-          <thead>
-            <tr>
-              <th className='border border-gray-300 px-4 py-2'>
-                {"Iteración"}
-              </th>
-              <th className='border border-gray-300 px-4 py-2'>{"a"}</th>
-              <th className='border border-gray-300 px-4 py-2'>{"f(a)"}</th>
-              <th className='border border-gray-300 px-4 py-2'>{"b"}</th>
-              <th className='border border-gray-300 px-4 py-2'>{"f(b)"}</th>
-              <th className='border border-gray-300 px-4 py-2'>{"c"}</th>
-              <th className='border border-gray-300 px-4 py-2'>{"f(c)"}</th>
-              <th className='border border-gray-300 px-4 py-2'>{"err"}</th>
-            </tr>
-          </thead>
-          <tbody>
-            {resultsArray.map((result, index) => (
-              <tr key={index} className={index % 2 === 0 ? "bg-gray-200" : ""}>
-                <td className='border border-gray-300 px-4 py-2'>
-                  {result.col1}
-                </td>
-                <td className='border border-gray-300 px-4 py-2'>
-                  {result.col2}
-                </td>
-                <td className='border border-gray-300 px-4 py-2'>
-                  {result.col3}
-                </td>
-                <td className='border border-gray-300 px-4 py-2'>
-                  {result.col4}
-                </td>
-                <td className='border border-gray-300 px-4 py-2'>
-                  {result.col5}
-                </td>
-                <td className='border border-gray-300 px-4 py-2'>
-                  {result.col6}
-                </td>
-                <td className='border border-gray-300 px-4 py-2'>
-                  {result.col7}
-                </td>
-                <td className='border border-gray-300 px-4 py-2'>
-                  {result.col8}
-                </td>
-              </tr>
-            ))}
-          </tbody>
-        </table>
+        <TableBiseccion resultsArray={resultsArray}></TableBiseccion>
       )}
     </div>
   );
