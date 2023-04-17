@@ -8,12 +8,12 @@ function Calcular() {
   const [result, setResult] = useState("");
   const [resultsArray, setResultsArray] = useState([]);
 
-  const handleChange = (event) => {
-    setOption(event.target.value);
+  const handleChange = (e) => {
+    setOption(e.target.value);
   };
   // Resultado de ejemplo calculamos el polinomio ;)
-  const handleSubmit = (event) => {
-    event.preventDefault();
+  const handleSubmit = (e) => {
+    e.preventDefault();
     setResult("resultado");
 
     // Resultado de ejemplo cuando calculamos por Bicepccion ;)
