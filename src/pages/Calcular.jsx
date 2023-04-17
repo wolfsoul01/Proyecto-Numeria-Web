@@ -93,9 +93,9 @@ function Calcular() {
           >
             Calcular
           </button>
-          <div className='inline-block align-baseline font-bold text-sm text-orange-500 hover:text-blue-800'>
+         {option === "option1" && <div className='inline-block align-baseline font-bold text-sm text-orange-500 hover:text-blue-800'>
             {result}
-          </div>
+          </div>} 
         </div>
       </form>
       {option === "option2" && resultsArray.length > 0 && (
