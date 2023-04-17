@@ -2,7 +2,7 @@ import { useState } from "react";
 import BiseccionInput from "../components/BiseccionInput";
 import FunctionInput from "../components/FunctionInput";
 import TableBiseccion from "../components/TableBiseccion";
-
+import {BsFillArrowDownCircleFill} from 'react-icons/bs'
 function Calcular() {
   const [option, setOption] = useState("");
   const [result, setResult] = useState("");
@@ -88,12 +88,12 @@ function Calcular() {
         )}
         <div className='flex items-center justify-between'>
           <button
-            className='bg-orange-500 hover:bg-gray-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline'
+            className='flex justify-center items-center p-2 bg-orange-500 hover:bg-gray-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline'
             type='submit'
           >
-            Calcular
+            Calcular {option === "option2" && <BsFillArrowDownCircleFill className="m-2"/>}
           </button>
-         {option === "option1" && <div className='inline-block align-baseline font-bold text-sm text-orange-500 hover:text-blue-800'>
+         {option === "option1" && <div className='inline-block align-baseline font-bold text-sm text-gray-800 '>
             {result}
           </div>} 
         </div>
