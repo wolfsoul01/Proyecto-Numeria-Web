@@ -13,7 +13,6 @@ const TableBiseccion = ({ resultsArray }) => {
             <th className='border border-gray-300 px-4 py-2'>{"b"}</th>
             <th className='border border-gray-300 px-4 py-2'>{"f(b)"}</th>
             <th className='border border-gray-300 px-4 py-2'>{"c"}</th>
-            <th className='border border-gray-300 px-4 py-2'>{"f(c)"}</th>
             <th className='border border-gray-300 px-4 py-2'>{"err"}</th>
           </tr>
         </thead>

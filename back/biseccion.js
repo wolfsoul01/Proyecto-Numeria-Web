@@ -1,22 +1,27 @@
-export const mBiseccion = (p, a, b, err) => {
+import * as math from 'mathjs'
+import { evaluarFuncion } from './evaluciacion';
+
+export const mBiseccion = (f, a, b, err) => {
     let c;
     let iteracion = 0;
     let resultados = [];
   
     // Iteramos hasta alcanzar el error
-    while (math.abs(b - a) > err) {
+    while (math.abs(b - a) >= err) {
       //  El punto medio del intervalo
       c = (a + b) / 2;
       iteracion++;
-  
+      
       // Evaluamos la función en el punto medio
-      const fc = f(c);
+      const fc = evaluarFuncion(f,c);
   
       // Guardamos los resultados de cada iteración en un objeto
       let resultado = {
         iteracion: iteracion,
         a: a,
+        fa:evaluarFuncion(f,a),
         b: b,
+        fb:evaluarFuncion(f,b),
         c: c,
         fc: fc
       };
@@ -28,7 +33,7 @@ export const mBiseccion = (p, a, b, err) => {
       }
   
       // entonces la raíz está en el intervalo [c, b]
-      if (math.sign(fc) === math.sign(f(a))) {
+      if (math.sign(fc) === math.sign(evaluarFuncion(f,a))) {
         a = c;
       }
   
@@ -41,6 +46,6 @@ export const mBiseccion = (p, a, b, err) => {
     // Devolve un objeto con  resultado final y  los resultados de las iteraciones
     return {
       raiz: c,
-      iteraciones: resultados
+      resultados
     };
   };
