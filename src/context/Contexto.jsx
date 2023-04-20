@@ -7,7 +7,10 @@ export const Data = ({ children }) => {
   const [func, setFunc] = useState("");
   const [evaluar, setEvaluar] = useState("");
   //Biseccion.
-  const [resultsArray, setResultsArray] = useState([]);
+  const [polinomio, setPolinomio] = useState([]);
+  const [primerIntervalo, setPrimerIntervalo] = useState([]);
+  const [segundoIntervalo, setSegundoIntervalo] = useState([]);
+  const [error, setError] = useState([]);
 
   return (
     <Contexto.Provider
@@ -16,8 +19,14 @@ export const Data = ({ children }) => {
         evaluar,
         setFunc,
         setEvaluar,
-        resultsArray,
-        setResultsArray,
+        polinomio,
+        setPolinomio,
+        primerIntervalo,
+        setPrimerIntervalo,
+        segundoIntervalo,
+        setSegundoIntervalo,
+        error,
+        setError,
       }}
     >
       {children}

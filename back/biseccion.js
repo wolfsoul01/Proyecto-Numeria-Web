@@ -1,4 +1,4 @@
-const mBiseccion = (p, a, b, err) => {
+export const mBiseccion = (p, a, b, err) => {
     let c;
     let iteracion = 0;
     let resultados = [];

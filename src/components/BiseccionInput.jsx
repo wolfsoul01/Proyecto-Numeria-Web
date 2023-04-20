@@ -1,7 +1,18 @@
 import React from "react";
-
+import { useContext } from "react";
+import { Contexto } from "../context/Contexto";
 const BiseccionInput = () => {
-   
+  const {
+    polinomio,
+    setPolinomio,
+    primerIntervalo,
+    setPrimerIntervalo,
+    segundoIntervalo,
+    setSegundoIntervalo,
+    error,
+    setError,
+  } = useContext(Contexto);
+
   return (
     <div>
       <div className='mb-4'>
@@ -13,6 +24,8 @@ const BiseccionInput = () => {
           id='input2'
           type='number'
           placeholder='Ej:0'
+          onChange={(e) => setPolinomio(e.target.value)}
+          value={polinomio}
         />
       </div>
       <div className='mb-4'>
@@ -24,6 +37,8 @@ const BiseccionInput = () => {
           id='input3'
           type='number'
           placeholder='Ej:1'
+          onChange={(e) => setPrimerIntervalo(e.target.value)}
+          value={primerIntervalo}
         />
       </div>
       <div className='mb-4'>
@@ -35,6 +50,8 @@ const BiseccionInput = () => {
           id='input4'
           type='text'
           placeholder='Ej:0.1'
+          onChange={(e) => setSegundoIntervalo(e.target.value)}
+          value={segundoIntervalo}
         />
       </div>
       <div className='mb-4'>
@@ -46,6 +63,8 @@ const BiseccionInput = () => {
           id='input4'
           type='text'
           placeholder='Ej:2x^3+1'
+          onChange={(e) => setError(e.target.value)}
+          value={error}
         />
       </div>
     </div>

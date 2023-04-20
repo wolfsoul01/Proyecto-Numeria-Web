@@ -6,11 +6,12 @@ import ButtonCalcualr from "../components/ButtonCalcualr";
 import { useContext } from "react";
 import { Contexto } from "../context/Contexto";
 import { evaluarFuncion } from "../../back/evaluciacion";
-
+import {mBiseccion} from '../../back/biseccion'
 function Calcular() {
-  const { func, evaluar, setResultsArray, resultsArray } = useContext(Contexto);
+  const { func, evaluar, Polinomio , srimerIntervalo , segundoIntervalo , error} = useContext(Contexto);
   const [option, setOption] = useState("");
   const [result, setResult] = useState("");
+  const [resultsArray, setResultsArray] = useState([]);
 
   const handleChange = (e) => {
     setOption(e.target.value);
@@ -22,28 +23,7 @@ function Calcular() {
       setResult(evaluarFuncion(func, evaluar));
     } else if (option == "option2") {
       // Resultado de ejemplo cuando calculamos por Bicepccion ;)
-      setResultsArray([
-        {
-          col1: "1",
-          col2: "22",
-          col3: "3534",
-          col4: "423",
-          col5: "523",
-          col6: "123",
-          col7: "123",
-          col8: "8123123123123123",
-        },
-        {
-          col1: "2",
-          col2: "223",
-          col3: "2343",
-          col4: "423",
-          col5: "5234",
-          col6: "6123",
-          col7: "7234",
-          col8: "812312312312312312312313",
-        },
-      ]);
+      setResultsArray(mBiseccion(Polinomio,srimerIntervalo,segundoIntervalo,error));
     }
   };
   return (
