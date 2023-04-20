@@ -7,5 +7,10 @@ pd: despues tendremos que ver como adaptamos la interfaz para manejar mas de una
 =========================================================================================================
 
 =========================================================================================================
+## Para el metodo mBiseccion se la pasan 4 parametros 1ro el string con el polinomio \\,2do el primer intervalo ,3ro el segundo intervalo ,4to el error 
+pd: Tenemos que ver como majeamos lo que nos dijo el profe hay que implemnar una funcion que al momento que el usuario rellene le campo del polinomio le sugiera los intervalos de las raices antes de que rellene el segundo input (\\)  se queda para despues pero bueno 
 
+### Ejemplo de este seria   /mBiseccion(polinomio:string, primerInte:int ,segundoInte:int , error:int  )/
+
+/mBiseccion('2x', 0, 1, 0.1)
 =========================================================================================================
