@@ -7,6 +7,7 @@ import { useContext } from "react";
 import { Contexto } from "../context/Contexto";
 import { evaluarFuncion } from "../../back/evaluciacion";
 import {mBiseccion} from '../../back/biseccion'
+
 function Calcular() {
   const { func, evaluar, Polinomio , srimerIntervalo , segundoIntervalo , error} = useContext(Contexto);
   const [option, setOption] = useState("");
