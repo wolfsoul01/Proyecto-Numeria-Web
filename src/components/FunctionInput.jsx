@@ -1,6 +1,9 @@
-import React from "react";
+import React, { useState } from "react";
+import {useContext} from 'react'
+import {Contexto} from '../context/Contexto'
 
 const FunctionInput = () => {
+  const { setFunc , setEvaluar , func , evaluar} = useContext(Contexto);
   return (
     <>
       <div className='mb-4'>
@@ -12,6 +15,8 @@ const FunctionInput = () => {
           id='input1'
           type='text'
           placeholder='Ej:2x^3'
+          onChange={(e) => setFunc(e.target.value) }
+          value={func}
         />
       </div>
       <div className='mb-4'>
@@ -23,6 +28,8 @@ const FunctionInput = () => {
           id='input5'
           type='number'
           placeholder='Ej:2'
+          onChange={(e) => setEvaluar(e.target.value) }
+          value={evaluar}
         />
       </div>
     </>

@@ -1,6 +1,7 @@
 import React from "react";
 
 const BiseccionInput = () => {
+   
   return (
     <div>
       <div className='mb-4'>

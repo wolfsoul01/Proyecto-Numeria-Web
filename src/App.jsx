@@ -3,16 +3,20 @@ import { BrowserRouter, Route, Routes } from "react-router-dom";
 import Home from "./pages/Home";
 import Navbar from "./components/Navbar";
 import Calcular from "./pages/Calcular";
+import {Data} from "./context/Contexto";
+
 const App = () => {
   return (
     <>
-      <BrowserRouter>
-        <Navbar />
-        <Routes>
-          <Route path='/' element={<Home />} />
-          <Route path='/calcular' element={<Calcular />} />
-        </Routes>
-      </BrowserRouter>
+      <Data>
+        <BrowserRouter>
+          <Navbar />
+          <Routes>
+            <Route path='/' element={<Home />} />
+            <Route path='/calcular' element={<Calcular />} />
+          </Routes>
+        </BrowserRouter>
+      </Data>
     </>
   );
 };

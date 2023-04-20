@@ -2,11 +2,15 @@ import { useState } from "react";
 import BiseccionInput from "../components/BiseccionInput";
 import FunctionInput from "../components/FunctionInput";
 import TableBiseccion from "../components/TableBiseccion";
-import { BsFillArrowDownCircleFill } from "react-icons/bs";
+import ButtonCalcualr from "../components/ButtonCalcualr";
+import { useContext } from "react";
+import { Contexto } from "../context/Contexto";
+import { evaluarFuncion } from "../../back/evaluciacion";
+
 function Calcular() {
+  const { func, evaluar, setResultsArray, resultsArray } = useContext(Contexto);
   const [option, setOption] = useState("");
   const [result, setResult] = useState("");
-  const [resultsArray, setResultsArray] = useState([]);
 
   const handleChange = (e) => {
     setOption(e.target.value);
@@ -14,33 +18,34 @@ function Calcular() {
   // Resultado de ejemplo calculamos el polinomio ;)
   const handleSubmit = (e) => {
     e.preventDefault();
-    setResult("resultado");
-
-    // Resultado de ejemplo cuando calculamos por Bicepccion ;)
-    setResultsArray([
-      {
-        col1: "1",
-        col2: "22",
-        col3: "3534",
-        col4: "423",
-        col5: "523",
-        col6: "123",
-        col7: "123",
-        col8: "8123123123123123",
-      },
-      {
-        col1: "2",
-        col2: "223",
-        col3: "2343",
-        col4: "423",
-        col5: "5234",
-        col6: "6123",
-        col7: "7234",
-        col8: "812312312312312312312313",
-      },
-    ]);
+    if (option == "option1") {
+      setResult(evaluarFuncion(func, evaluar));
+    } else if (option == "option2") {
+      // Resultado de ejemplo cuando calculamos por Bicepccion ;)
+      setResultsArray([
+        {
+          col1: "1",
+          col2: "22",
+          col3: "3534",
+          col4: "423",
+          col5: "523",
+          col6: "123",
+          col7: "123",
+          col8: "8123123123123123",
+        },
+        {
+          col1: "2",
+          col2: "223",
+          col3: "2343",
+          col4: "423",
+          col5: "5234",
+          col6: "6123",
+          col7: "7234",
+          col8: "812312312312312312312313",
+        },
+      ]);
+    }
   };
-
   return (
     <div className='min-h-screen p-9 bg-gray-100 flex flex-col justify-center items-center'>
       <form
@@ -82,22 +87,7 @@ function Calcular() {
         </div>
         {option === "option1" && <FunctionInput></FunctionInput>}
         {option === "option2" && <BiseccionInput></BiseccionInput>}
-        <div className='flex items-center justify-between'>
-          <button
-            className='flex justify-center items-center p-2 bg-orange-500 hover:bg-gray-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline'
-            type='submit'
-          >
-            Calcular{" "}
-            {option === "option2" && (
-              <BsFillArrowDownCircleFill className='ml-2' />
-            )}
-          </button>
-          {option === "option1" && (
-            <div className='inline-block align-baseline font-bold text-sm text-gray-800 '>
-              {result}
-            </div>
-          )}
-        </div>
+        <ButtonCalcualr option={option} result={result} />
       </form>
       {option === "option2" && resultsArray.length > 0 && (
         <TableBiseccion resultsArray={resultsArray}></TableBiseccion>
