@@ -3,7 +3,7 @@ import React from "react";
 const TableBiseccion = ({ resultsArray , polinomioUsado }) => {
   return (
     <>
-      <h1 className='text-center text-xl font-extrabold m-0'>Resultados</h1>
+      <h1 className='text-center text-xl text-orange-500 font-extrabold m-0'>Resultados</h1>
       <table className='bg-white table-auto mt-8 border-collapse border border-gray-300'>
         <thead>
           <tr>
