@@ -70,44 +70,12 @@ const Navbar = () => {
           </div>
 
           <div className='md:hidden'>
-            <button
-              className='flex items-center justify-center h-8 w-8 text-gray-800 hover:text-gray-600 focus:outline-none'
-              onClick={() => setIsOpen(!isOpen)}
-            >
-              {isOpen ? (
-                <svg
-                  xmlns='http://www.w3.org/2000/svg'
-                  className='h-6 w-6'
-                  fill='none'
-                  viewBox='0 0 24 24'
-                  stroke='currentColor'
-                  aria-hidden='true'
-                >
-                  <path
-                    strokeLinecap='round'
-                    strokeLinejoin='round'
-                    strokeWidth={2}
-                    d='M6 18L18 6M6 6l12 12'
-                  />
-                </svg>
-              ) : (
-                <svg
-                  xmlns='http://www.w3.org/2000/svg'
-                  className='h-6 w-6'
-                  fill='none'
-                  viewBox='0 0 24 24'
-                  stroke='currentColor'
-                  aria-hidden='true'
-                >
-                  <path
-                    strokeLinecap='round'
-                    strokeLinejoin='round'
-                    strokeWidth={2}
-                    d='M4 6h16M4 12h16M4 18h16'
-                  />
-                </svg>
-              )}
-            </button>
+            <input onClick={() => setIsOpen(!isOpen)} type='checkbox' id='checkbox' />
+            <label for='checkbox' class='toggle'>
+              <div class='bars' id='bar1'></div>
+              <div class='bars' id='bar2'></div>
+              <div class='bars' id='bar3'></div>
+            </label> 
           </div>
         </div>
 
