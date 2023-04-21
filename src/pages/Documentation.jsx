@@ -29,19 +29,12 @@ function Documentation() {
           </p>
         </section>
         <section id="biseccion" className="mb-20">
-          <h2 className="text-2xl font-bold mb-4">Cálculo de un polinomio por el método de Bisección</h2>
+          <h2 className="text-2xl font-bold mb-4">2.Cálculo de un polinomio por el método de Bisección</h2>
           <p className="mb-4">
-            El método de Bisección es un algoritmo numérico utilizado para encontrar las raíces de una función.
-            Este método se basa en el teorema del valor intermedio, que establece que si una función es continua
-            en un intervalo cerrado, entonces toma todos los valores que se encuentran entre el valor de la función
-            en los extremos del intervalo. El método de Bisección consiste en dividir sucesivamente el intervalo
-            en dos partes iguales y determinar en cuál de ellas se encuentra la raíz buscada. Este proceso se
-            repite hasta que se alcanza la precisión deseada.
+            
           </p>
           <p className="mb-4">
-            El método de Bisección es un algoritmo sencillo y robusto para encontrar raíces de una función, pero
-            puede ser lento para funciones complicadas o con múltiples raíces. En general, se recomienda utilizar
-            otros métodos numéricos más avanzados para problemas más complejos.
+            
           </p>
         </section>
       </div>
