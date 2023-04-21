@@ -36,7 +36,7 @@ const Navbar = () => {
               <li>
                 <NavLink
                   to={"/"}
-                  className='text-gray-800 hover:text-orange-500 cursor-pointer select-none'
+                  className='text-gray-800 font-semibold hover:text-orange-500 cursor-pointer select-none'
                 >
                   Inicio
                 </NavLink>
@@ -44,7 +44,7 @@ const Navbar = () => {
               <li>
                 <NavLink
                   to={"/calcular"}
-                  className='text-gray-800 hover:text-orange-500 cursor-pointer select-none'
+                  className='text-gray-800 font-semibold hover:text-orange-500 cursor-pointer select-none'
                 >
                   Calcular
                 </NavLink>
@@ -52,7 +52,7 @@ const Navbar = () => {
               <li>
                 <NavLink
                   to={"/documentation"}
-                  className='text-gray-800 hover:text-orange-500 cursor-pointer select-none'
+                  className='text-gray-800 font-semibold hover:text-orange-500 cursor-pointer select-none'
                 >
                   Doc
                 </NavLink>
@@ -94,7 +94,7 @@ const Navbar = () => {
                 <li>
                   <NavLink
                     to={"/"}
-                    className='text-gray-800 hover:text-orange-500 cursor-pointer select-none'
+                    className='text-gray-800 font-semibold hover:text-orange-500 cursor-pointer select-none'
                   >
                     Inicio
                   </NavLink>
@@ -102,7 +102,7 @@ const Navbar = () => {
                 <li>
                   <NavLink
                     to={"/calcular"}
-                    className='text-gray-800 hover:text-orange-500 cursor-pointer select-none'
+                    className='text-gray-800 font-semibold hover:text-orange-500 cursor-pointer select-none'
                   >
                     Calcular
                   </NavLink>
@@ -110,7 +110,7 @@ const Navbar = () => {
                 <li>
                   <NavLink
                     to={"/documentation"}
-                    className='text-gray-800 hover:text-orange-500 cursor-pointer select-none'
+                    className='text-gray-800 font-semibold hover:text-orange-500 cursor-pointer select-none'
                   >
                     Doc
                   </NavLink>

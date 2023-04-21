@@ -117,7 +117,7 @@
    }
    /* Estilos para la barra de desplazamiento */
 ::-webkit-scrollbar {
-    width: 8px;
+    width: 4px;
   }
   
   ::-webkit-scrollbar-track {
@@ -125,9 +125,9 @@
   }
   
   ::-webkit-scrollbar-thumb {
-    background-color: #888;
+    background-color: #f9741679;
     border-radius: 20px;
-    border: 2px solid #000000;
+    
   }
   
   ::-webkit-scrollbar-thumb:hover {
