@@ -53,7 +53,7 @@ function Calcular() {
               onChange={handleChange}
             >
               <option value=''>Seleccione una opción</option>
-              <option value='option1'>Calcular Polinomio</option>
+              <option value='option1'>Calcular Función</option>
               <option value='option2'>Biseccion</option>
             </select>
             <div className='pointer-events-none absolute inset-y-0 right-0 flex items-center px-2 text-gray-700'>
