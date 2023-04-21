@@ -5,6 +5,7 @@ import { NavLink } from "react-router-dom";
 import Footer from "../components/Footer";
 const Home = () => {
   return (
+    <>
     <div className='flex flex-col h-screen'>
       <div
         className='flex flex-col justify-center items-center w-full h-full bg-cover bg-center'
@@ -16,7 +17,7 @@ const Home = () => {
         <p className='text-center text-gray-200 font-light'>
           Haz cálculos precisos y controlados <br /> como un experto en
           matemáticas con nuestro método exclusivo
-          <br /> "¡Despierta el genio matemático que llevas dentro con nosotros!!
+          <br /> ¡Deja una migaja de pan en cada paso!
         </p>
      
         <NavLink
@@ -27,8 +28,9 @@ const Home = () => {
           <BiArrowFromLeft className='svg ' />
         </NavLink>
       </div>
-      <Footer />
     </div>
+    <Footer />
+    </>
   );
 };
 
