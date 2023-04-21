@@ -16,7 +16,7 @@ function Documentation() {
           </a>
         </div>
       </div>
-      <div className="container mx-auto my-8">
+      <div className="container mx-auto my-8 px-2">
         <section id="funcion">
           <h2 className="text-2xl font-bold mb-4">Cálculo de un polinomio por el método de Horner</h2>
           <p className="mb-4">
