@@ -17,6 +17,7 @@ const FunctionInput = () => {
           placeholder='Ej:2x^3'
           onChange={(e) => setFunc(e.target.value) }
           value={func}
+          required
         />
       </div>
       <div className='mb-4'>
@@ -30,6 +31,7 @@ const FunctionInput = () => {
           placeholder='Ej:2'
           onChange={(e) => setEvaluar(e.target.value) }
           value={evaluar}
+          required
         />
       </div>
     </>

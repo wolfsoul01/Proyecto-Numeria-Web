@@ -26,6 +26,7 @@ const BiseccionInput = () => {
           placeholder='Ej:2x^3+1'
           onChange={(e) => setPolinomio(e.target.value)}
           value={polinomio}
+          required
         />
       </div>
       <div className='mb-4'>
@@ -39,6 +40,7 @@ const BiseccionInput = () => {
           placeholder='Ej:0'
           onChange={(e) => setPrimerIntervalo(e.target.value)}
           value={primerIntervalo}
+          required
         />
       </div>
       <div className='mb-4'>
@@ -52,6 +54,7 @@ const BiseccionInput = () => {
           placeholder='Ej:1'
           onChange={(e) => setSegundoIntervalo(e.target.value)}
           value={segundoIntervalo}
+          required
         />
       </div>
       <div className='mb-4'>
@@ -65,6 +68,7 @@ const BiseccionInput = () => {
           placeholder='Ej:0.1'
           onChange={(e) => setError(e.target.value)}
           value={error}
+          required
         />
       </div>
       
