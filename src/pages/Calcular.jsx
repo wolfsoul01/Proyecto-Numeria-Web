@@ -14,7 +14,7 @@ function Calcular() {
   const [option, setOption] = useState("");
   const [result, setResult] = useState("");
   const [resultsArray, setResultsArray] = useState({ raiz: 0, resultados: [] });
-
+  const [polinomioUsado, setPolinomioUsado] = useState("");
   const handleChange = (e) => {
     setOption(e.target.value);
   };
@@ -28,6 +28,7 @@ function Calcular() {
       setResultsArray(
         mBiseccion(polinomio, primerIntervalo, segundoIntervalo, error)
       );
+      setPolinomioUsado(polinomio);
     }
   };
 
@@ -75,7 +76,10 @@ function Calcular() {
         <ButtonCalcualr option={option} result={result} />
       </form>
       {option === "option2" && resultsArray.resultados.length > 0 && (
-        <TableBiseccion resultsArray={resultsArray}></TableBiseccion>
+        <TableBiseccion
+          resultsArray={resultsArray}
+          polinomioUsado={polinomioUsado}
+        ></TableBiseccion>
       )}
     </div>
   );

@@ -50,8 +50,8 @@ const Navbar = () => {
                 </NavLink>
               </li>
               <li>
-                <a className='text-gray-800 hover:text-orange-500 cursor-pointer select-none'  href=''>
-                  <FaGithub size={50}/>
+                <a className='text-gray-800 hover:text-orange-500 cursor-pointer select-none'  href='https://github.com/https://github.com/wolfsoul01/Proyecto-Numeria-Web'>
+                  <FaGithub size={30}/>
                 </a>
               </li>
             </ul>

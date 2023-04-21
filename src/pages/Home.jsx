@@ -2,9 +2,10 @@ import React from "react";
 import { BsFillArrowRightCircleFill } from "react-icons/bs";
 import fondo from "../assets/fondo.svg";
 import { NavLink } from "react-router-dom";
+import Footer from "../components/Footer";
 const Home = () => {
   return (
-    <div className='flex h-screen'>
+    <div className='flex flex-col h-screen'>
       <div
         className='flex flex-col justify-center items-center w-full h-full bg-cover bg-center'
         style={{ backgroundImage: `url('${fondo}')` }}
@@ -27,6 +28,7 @@ const Home = () => {
           </span>
         </NavLink>
       </div>
+      <Footer />
     </div>
   );
 };

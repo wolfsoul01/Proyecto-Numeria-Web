@@ -1,6 +1,6 @@
 import React from "react";
 
-const TableBiseccion = ({ resultsArray }) => {
+const TableBiseccion = ({ resultsArray , polinomioUsado }) => {
   return (
     <>
       <h1 className='text-center text-xl font-extrabold m-0'>Resultados</h1>
@@ -44,7 +44,8 @@ const TableBiseccion = ({ resultsArray }) => {
           ))}
         </tbody>
       </table>
-      <h3>Resultado: {resultsArray.raiz}</h3>
+      <h3 className="text-orange-500 font-black">Polinomio : <span className="text-gray-900">{polinomioUsado}</span></h3>
+      <h3 className="text-orange-500 font-black">Resultado final: <span className="text-gray-900">{resultsArray.raiz}</span></h3>
     </>
   );
 };
