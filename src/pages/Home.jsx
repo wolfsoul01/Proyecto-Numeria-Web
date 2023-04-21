@@ -16,7 +16,7 @@ const Home = () => {
         <p className='text-center text-gray-500 font-light'>
           Haz cálculos precisos y controlados <br /> como un experto en
           matemáticas con nuestro método exclusivo
-          <br /> ¡Deja una migaja de pan en cada paso!
+          <br /> "¡Despierta el genio matemático que llevas dentro con nosotros!!
         </p>
         <NavLink
           to={"/calcular"}
