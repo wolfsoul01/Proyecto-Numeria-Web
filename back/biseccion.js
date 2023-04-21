@@ -1,5 +1,5 @@
 import * as math from "mathjs";
-import { evaluarFuncion } from "./evaluciacion";
+import { evaluarFuncion } from "./evaluciacion.js";
 
 export const mBiseccion = (f, a, b, err) => {
   let c;
@@ -42,10 +42,12 @@ export const mBiseccion = (f, a, b, err) => {
       b = c;
     }
   }
-
+  //return console.log(resultados);
   // Devolve un objeto con  resultado final y  los resultados de las iteraciones
   return {
     raiz: c,
     resultados,
   };
 };
+
+//mBiseccion("2x^3+1", 0, 1, 0.1);
