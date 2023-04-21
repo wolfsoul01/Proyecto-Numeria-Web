@@ -66,3 +66,70 @@
     transition-duration: .5s;
     transform: rotate(180deg);
   }
+
+  /*Botton Home*/
+  .cta {
+    position: relative;
+    padding: 1rem;
+    transition: all 0.2s ease;
+    border: none;
+    background: none;
+   }
+   
+   .cta:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: block;
+    border-radius: 4px;
+    background: rgba(249, 116, 22, 0.397);
+    width: 45px;
+    height: 54px;
+    transition: all 0.3s ease;
+   }
+   
+   .cta span {
+    position: relative;
+   }
+   
+   .cta .svg {
+    margin-left: 15px;
+    transform: translateX(-10px);
+    transition: all 0.3s ease;
+   }
+   
+   .cta:hover:before {
+    width: 100%;
+    background: rgb(249 115 22);
+   }
+   
+   .cta:hover .svg {
+    transform: translateX(0);
+    color: aliceblue;
+   }
+   
+   .cta:active {
+    transform: scale(0.95);
+   }
+   .cta:hover {
+    color: white;
+   }
+   /* Estilos para la barra de desplazamiento */
+::-webkit-scrollbar {
+    width: 8px;
+  }
+  
+  ::-webkit-scrollbar-track {
+    background: #f1f1f1;
+  }
+  
+  ::-webkit-scrollbar-thumb {
+    background-color: #888;
+    border-radius: 20px;
+    border: 2px solid #000000;
+  }
+  
+  ::-webkit-scrollbar-thumb:hover {
+    background-color: #555;
+  }

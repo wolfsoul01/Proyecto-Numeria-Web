@@ -1,6 +1,6 @@
 import React from "react";
-import { BsFillArrowRightCircleFill } from "react-icons/bs";
-import fondo from "../assets/fondo.svg";
+import { BiArrowFromLeft } from "react-icons/bi";
+import fondo from "../assets/fondo.jpg";
 import { NavLink } from "react-router-dom";
 import Footer from "../components/Footer";
 const Home = () => {
@@ -10,22 +10,21 @@ const Home = () => {
         className='flex flex-col justify-center items-center w-full h-full bg-cover bg-center'
         style={{ backgroundImage: `url('${fondo}')` }}
       >
-        <h1 className='text-center text-3xl text-dark font-black'>
+        <h1 className='text-center text-orange-500 text-3xl text-dark font-black'>
           "Hazlo facil con nosotros"
         </h1>
-        <p className='text-center text-gray-500 font-light'>
+        <p className='text-center text-gray-200 font-light'>
           Haz cálculos precisos y controlados <br /> como un experto en
           matemáticas con nuestro método exclusivo
           <br /> ¡Deja una migaja de pan en cada paso!
         </p>
+     
         <NavLink
           to={"/calcular"}
-          className='hover:scale-105 py-4 bg-orange-500 m-5 flex place-items-center hover:bg-gray-700 text-white font-bold px-4 rounded'
+          className='cta flex place-items-center font-black m-5 text-gray-600'
         >
-          <span className='flex place-items-center'>
-            Comenzar{" "}
-            <BsFillArrowRightCircleFill className='ml-4 animate-pulse' />
-          </span>
+          <span>Comenzar </span>
+          <BiArrowFromLeft className='svg ' />
         </NavLink>
       </div>
       <Footer />
