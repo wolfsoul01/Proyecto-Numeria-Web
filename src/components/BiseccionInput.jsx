@@ -23,7 +23,7 @@ const BiseccionInput = () => {
           className='shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline'
           id='input2'
           type='text'
-          placeholder='Ej:2x^3+1'
+          placeholder='Ej:2x^3'
           onChange={(e) => setPolinomio(e.target.value)}
           value={polinomio}
           required
