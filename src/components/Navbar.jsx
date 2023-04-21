@@ -21,9 +21,9 @@ const Navbar = () => {
 
   return (
     <nav
-      className={` top-0 left-0 right-0 z-50 bg-white  backdrop-filter bg-opacity-10 shadow-sm backdrop-blur-sm `}
+      className={`top-0 left-0 right-0 z-50  bg-white`}
     >
-      <div className='container mx-auto py-4 px-6 md:px-8'>
+      <div className='container mx-auto py-2 px-6 md:px-8'>
         <div className='flex justify-between items-center'>
           <NavLink
             to={"/"}
@@ -36,7 +36,7 @@ const Navbar = () => {
               <li>
                 <NavLink
                   to={"/"}
-                  className='text-gray-800 hover:text-orange-500 cursor-pointer select-none'
+                  className='text-gray-800 font-semibold hover:text-orange-500 cursor-pointer select-none'
                 >
                   Inicio
                 </NavLink>
@@ -44,7 +44,7 @@ const Navbar = () => {
               <li>
                 <NavLink
                   to={"/calcular"}
-                  className='text-gray-800 hover:text-orange-500 cursor-pointer select-none'
+                  className='text-gray-800 font-semibold hover:text-orange-500 cursor-pointer select-none'
                 >
                   Calcular
                 </NavLink>
@@ -52,7 +52,7 @@ const Navbar = () => {
               <li>
                 <NavLink
                   to={"/documentation"}
-                  className='text-gray-800 hover:text-orange-500 cursor-pointer select-none'
+                  className='text-gray-800 font-semibold hover:text-orange-500 cursor-pointer select-none'
                 >
                   Doc
                 </NavLink>
@@ -94,7 +94,7 @@ const Navbar = () => {
                 <li>
                   <NavLink
                     to={"/"}
-                    className='text-gray-800 hover:text-orange-500 cursor-pointer select-none'
+                    className='text-gray-800 font-semibold hover:text-orange-500 cursor-pointer select-none'
                   >
                     Inicio
                   </NavLink>
@@ -102,7 +102,7 @@ const Navbar = () => {
                 <li>
                   <NavLink
                     to={"/calcular"}
-                    className='text-gray-800 hover:text-orange-500 cursor-pointer select-none'
+                    className='text-gray-800 font-semibold hover:text-orange-500 cursor-pointer select-none'
                   >
                     Calcular
                   </NavLink>
@@ -110,7 +110,7 @@ const Navbar = () => {
                 <li>
                   <NavLink
                     to={"/documentation"}
-                    className='text-gray-800 hover:text-orange-500 cursor-pointer select-none'
+                    className='text-gray-800 font-semibold hover:text-orange-500 cursor-pointer select-none'
                   >
                     Doc
                   </NavLink>

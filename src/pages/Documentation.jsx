@@ -1,9 +1,9 @@
 import React from 'react';
-
+import fondo from "../assets/fondo.jpg";
 function Documentation() {
   return (
-    <div className="relative md:px-14">
-      <div className="container mx-auto text-center py-4">
+    <div className="relative">
+      <div className="container mx-auto text-center md:px-14 py-4">   
         <h1 className="text-4xl font-bold my-8 text-orange-500">Documentación</h1>
       </div>
       <div className="fixed bottom-0 left-0 w-full bg-gray-800 py-2">
