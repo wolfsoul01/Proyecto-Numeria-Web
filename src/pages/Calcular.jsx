@@ -71,15 +71,15 @@ function Calcular() {
             </div>
           </div>
         </div>
-        {option === "option1" && <FunctionInput></FunctionInput>}
-        {option === "option2" && <BiseccionInput></BiseccionInput>}
+        {option === "option1" && <FunctionInput />}
+        {option === "option2" && <BiseccionInput />}
         <ButtonCalcualr option={option} result={result} />
       </form>
       {option === "option2" && resultsArray.resultados.length > 0 && (
         <TableBiseccion
           resultsArray={resultsArray}
           polinomioUsado={polinomioUsado}
-        ></TableBiseccion>
+        />
       )}
     </div>
   );
