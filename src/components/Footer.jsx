@@ -1,5 +1,5 @@
 import React from 'react';
-import Guille from '../assets/Guille.png'
+import Guille from '../assets/Guille.jpg'
 import Ale from '../assets/Ale.jpg'
 import Dayanis from '../assets/Dayanis.jpg'
 function Footer() {
