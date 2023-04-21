@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { Transition } from "@headlessui/react";
 import Numeria from "../assets/N.png";
-import { NavLink  } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 import { FaGithub } from "react-icons/fa";
 const Navbar = () => {
   const [isMobile, setIsMobile] = useState(false);
@@ -50,8 +50,20 @@ const Navbar = () => {
                 </NavLink>
               </li>
               <li>
-                <a className='text-gray-800 hover:text-orange-500 cursor-pointer select-none'  href='https://github.com/https://github.com/wolfsoul01/Proyecto-Numeria-Web'>
-                  <FaGithub size={30}/>
+                <NavLink
+                  to={"/documentation"}
+                  className='text-gray-800 hover:text-orange-500 cursor-pointer select-none'
+                >
+                  Doc
+                </NavLink>
+              </li>
+              <li>
+                <a
+                  className='text-gray-800 hover:text-orange-500 cursor-pointer select-none'
+                  target='_blank'
+                  href='https://github.com/wolfsoul01/Proyecto-Numeria-Web'
+                >
+                  <FaGithub size={30} />
                 </a>
               </li>
             </ul>
@@ -126,6 +138,23 @@ const Navbar = () => {
                   >
                     Calcular
                   </NavLink>
+                </li>
+                <li>
+                  <NavLink
+                    to={"/documentation"}
+                    className='text-gray-800 hover:text-orange-500 cursor-pointer select-none'
+                  >
+                    Doc
+                  </NavLink>
+                </li>
+                <li>
+                  <a
+                    className='text-gray-800 hover:text-orange-500 cursor-pointer select-none'
+                    target='_blank'
+                    href='https://github.com/wolfsoul01/Proyecto-Numeria-Web'
+                  >
+                    <FaGithub size={30} />
+                  </a>
                 </li>
               </ul>
             </div>
