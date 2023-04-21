@@ -35,7 +35,9 @@ function Calcular() {
 
   return (
     <div className='min-h-screen p-9 flex flex-col justify-center items-center'>
-       <div className="fixed h-full w-full bg-cover bg-center blur-2xl -z-10"  style={{ backgroundImage: `url('${fondo}')` }}></div>
+       <div 
+         className="fixed h-full w-full bg-cover p-0 m-0 bg-center blur-2xl -z-10" 
+         style={{ backgroundImage: `url('${fondo}')` }}></div>
       <form
         className='bg-white shadow-md rounded px-8 pt-6 pb-8 mb-4'
         onSubmit={handleSubmit}
