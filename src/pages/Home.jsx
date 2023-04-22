@@ -8,13 +8,13 @@ const Home = () => {
     <>
     <div className='flex flex-col h-screen'>
       <div
-        className='flex flex-col justify-center items-center w-full h-full bg-cover bg-center'
+        className='flex flex-col gap-7 justify-center items-center w-full h-full bg-cover bg-center'
         style={{ backgroundImage: `url('${fondo}')` }}
       >
-        <h1 className='text-center text-orange-500 text-3xl text-dark font-black'>
+        <h1 className='text-center text-orange-500 text-4xl text-shadow text-dark font-black'>
           "Hazlo facil con nosotros"
         </h1>
-        <p className='text-center text-gray-200 font-light'>
+        <p className='text-center text-gray-50 text-lg text-shadow font-medium'>
           Haz cálculos precisos y controlados <br /> como un experto en
           matemáticas con nuestro método exclusivo
           <br /> ¡Deja una migaja de pan en cada paso!
@@ -22,7 +22,7 @@ const Home = () => {
      
         <NavLink
           to={"/calcular"}
-          className='cta flex place-items-center font-black m-5 text-gray-600'
+          className='cta flex place-items-center font-black text-gray-600'
         >
           <span>Comenzar </span>
           <BiArrowFromLeft className='svg ' />

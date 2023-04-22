@@ -133,3 +133,9 @@
   ::-webkit-scrollbar-thumb:hover {
     background-color: #555;
   }
+
+  /*Sombra en letras */
+
+  .text-shadow{
+    text-shadow: 1px 1px 10px rgb(0, 0, 0);
+  }
