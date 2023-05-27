@@ -11,6 +11,12 @@ export const Data = ({ children }) => {
   const [primerIntervalo, setPrimerIntervalo] = useState([]);
   const [segundoIntervalo, setSegundoIntervalo] = useState([]);
   const [error, setError] = useState([]);
+  //Jacobi state.matrix, b, tolerance, maxIterations
+  const [matrix, setMatrix] = useState([]);
+  const [base, setBase] = useState([]);
+  const [tolerance, setTolerance] = useState([]);
+  const [maxIterations, setMxIterations] = useState([]);
+
 
   return (
     <Contexto.Provider
@@ -26,7 +32,7 @@ export const Data = ({ children }) => {
         segundoIntervalo,
         setSegundoIntervalo,
         error,
-        setError,
+        setError, matrix, setMatrix, base, setBase, tolerance, setTolerance, maxIterations, setMxIterations
       }}
     >
       {children}

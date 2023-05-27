@@ -11,7 +11,7 @@ const ButtonCalcualr = ({ option , result }) => {
         type='submit'
       >
         Calcular{" "}
-        {option === "option2" && <BsFillArrowDownCircleFill className='ml-2' />}
+        {option === "option2" || option === "option3"  && <BsFillArrowDownCircleFill className='ml-2' />}
       </button>
       {option === "option1" && (
         <div className='inline-block align-baseline font-bold text-sm text-gray-800 '>

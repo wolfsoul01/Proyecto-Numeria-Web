@@ -3,6 +3,7 @@ import BiseccionInput from "../components/BiseccionInput";
 import FunctionInput from "../components/FunctionInput";
 import TableBiseccion from "../components/TableBiseccion";
 import ButtonCalcualr from "../components/ButtonCalcualr";
+import JacobiIntput from "../components/JacobiIntput";
 import { useContext } from "react";
 import { Contexto } from "../context/Contexto";
 import { evaluarFuncion } from "../../back/evaluciacion";
@@ -10,12 +11,14 @@ import { mBiseccion } from "../../back/biseccion";
 import fondo from "../assets/fondo.jpg";
 
 function Calcular() {
-  const { func, evaluar, polinomio, primerIntervalo, segundoIntervalo, error } =
-    useContext(Contexto);
+  const { func, evaluar, polinomio, primerIntervalo, segundoIntervalo, error, matrix , base, tolerance, maxIterations } = useContext(Contexto);
+  
   const [option, setOption] = useState("");
   const [result, setResult] = useState("");
   const [resultsArray, setResultsArray] = useState({ raiz: 0, resultados: [] });
   const [polinomioUsado, setPolinomioUsado] = useState("");
+
+
   const handleChange = (e) => {
     setOption(e.target.value);
   };
@@ -24,20 +27,25 @@ function Calcular() {
     e.preventDefault();
     if (option == "option1") {
       setResult(evaluarFuncion(func, evaluar));
-    } else if (option == "option2") {
+    } 
+    else if (option == "option2") {
       // Resultado de ejemplo cuando calculamos por Bicepccion ;)
       setResultsArray(
         mBiseccion(polinomio, primerIntervalo, segundoIntervalo, error)
       );
       setPolinomioUsado(polinomio);
     }
+    else if (option == "option3") {
+       alert(`Results ${matrix} ${base} ${tolerance} ${maxIterations}.`)
+    }
+
   };
 
   return (
     <div className='min-h-screen p-9 flex flex-col justify-center items-center'>
-       <div 
-         className="fixed h-full w-full bg-cover p-0 m-0 bg-center blur-2xl -z-10" 
-         style={{ backgroundImage: `url('${fondo}')` }}></div>
+      <div
+        className="fixed h-full w-full bg-cover p-0 m-0 bg-center blur-2xl -z-10"
+        style={{ backgroundImage: `url('${fondo}')` }}></div>
       <form
         className='bg-white shadow-md rounded px-8 pt-6 pb-8 mb-4'
         onSubmit={handleSubmit}
@@ -59,6 +67,7 @@ function Calcular() {
               <option value=''>Seleccione una opción</option>
               <option value='option1'>Calcular Función</option>
               <option value='option2'>Biseccion</option>
+              <option value='option3'>Metodo Jacobi</option>
             </select>
             <div className='pointer-events-none absolute inset-y-0 right-0 flex items-center px-2 text-gray-700'>
               <svg
@@ -77,6 +86,7 @@ function Calcular() {
         </div>
         {option === "option1" && <FunctionInput />}
         {option === "option2" && <BiseccionInput />}
+        {option === "option3" && <JacobiIntput />}
         <ButtonCalcualr option={option} result={result} />
       </form>
       {option === "option2" && resultsArray.resultados.length > 0 && (
