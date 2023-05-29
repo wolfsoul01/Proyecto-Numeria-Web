@@ -1,9 +1,9 @@
-const math = require('mathjs');
+import { zeros, norm, subtract } from 'mathjs';
 
 function jacobiMethod(matrix, b, tolerance, maxIterations) {
   const n = matrix.length;
-  let x = math.zeros(n)._data; // Convertimos el vector a un array
-  let xNext = math.zeros(n)._data; // Convertimos el vector a un array
+  let x = zeros(n)._data; // Convertimos el vector a un array
+  let xNext = zeros(n)._data; // Convertimos el vector a un array
   let iteration = 0;
 
   const result = {
@@ -24,7 +24,7 @@ function jacobiMethod(matrix, b, tolerance, maxIterations) {
       xNext[i] = (b[i] - sum) / matrix[i][i];
     }
 
-    let error = math.norm(math.subtract(xNext, x), 'inf');
+    let error = norm(subtract(xNext, x), 'inf');
 
     result.iterations.push({
       iteration: iteration,

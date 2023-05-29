@@ -1,4 +1,4 @@
-const math = require("mathjs");
+import * as math from "mathjs"
 
 function gaussSeidelMethod(matrix, b, tolerance, maxIterations) {
   const n = matrix.length;
