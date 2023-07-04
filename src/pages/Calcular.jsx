@@ -11,13 +11,23 @@ import { mBiseccion } from "../../back/biseccion";
 import fondo from "../assets/fondo.jpg";
 
 function Calcular() {
-  const { func, evaluar, polinomio, primerIntervalo, segundoIntervalo, error, matrix , base, tolerance, maxIterations } = useContext(Contexto);
-  
+  const {
+    func,
+    evaluar,
+    polinomio,
+    primerIntervalo,
+    segundoIntervalo,
+    error,
+    matrix,
+    base,
+    tolerance,
+    maxIterations,
+  } = useContext(Contexto);
+
   const [option, setOption] = useState("");
   const [result, setResult] = useState("");
   const [resultsArray, setResultsArray] = useState({ raiz: 0, resultados: [] });
   const [polinomioUsado, setPolinomioUsado] = useState("");
-
 
   const handleChange = (e) => {
     setOption(e.target.value);
@@ -27,58 +37,52 @@ function Calcular() {
     e.preventDefault();
     if (option == "option1") {
       setResult(evaluarFuncion(func, evaluar));
-    } 
-    else if (option == "option2") {
+    } else if (option == "option2") {
       // Resultado de ejemplo cuando calculamos por Bicepccion ;)
       setResultsArray(
         mBiseccion(polinomio, primerIntervalo, segundoIntervalo, error)
       );
       setPolinomioUsado(polinomio);
+    } else if (option == "option3") {
+      alert(`Results ${matrix} ${base} ${tolerance} ${maxIterations}.`);
     }
-    else if (option == "option3") {
-       alert(`Results ${matrix} ${base} ${tolerance} ${maxIterations}.`)
-    }
-
   };
 
   return (
-    <div className='min-h-screen p-9 flex flex-col justify-center items-center'>
-      <div
-        className="fixed h-full w-full bg-cover p-0 m-0 bg-center blur-2xl -z-10"
-        style={{ backgroundImage: `url('${fondo}')` }}></div>
+    <div className="min-h-screen bg-gray-300 p-9 flex flex-col justify-center items-center">
       <form
-        className='bg-white shadow-md rounded px-8 pt-6 pb-8 mb-4'
+        className="bg-white shadow-md rounded px-8 pt-6 pb-8 mb-4"
         onSubmit={handleSubmit}
       >
-        <div className='mb-4'>
+        <div className="mb-4">
           <label
-            className='block text-gray-700 font-bold mb-2'
-            htmlFor='option'
+            className="block text-gray-700 font-bold mb-2"
+            htmlFor="option"
           >
             Numeria:
           </label>
-          <div className='relative'>
+          <div className="relative">
             <select
-              className='block appearance-none w-full bg-gray-200 focus:bg-white border border-gray-200 text-gray-700 py-2 px-4 pr-8 rounded leading-tight focus:outline-none focus:shadow-outline'
-              id='option'
+              className="block appearance-none w-full bg-gray-200 focus:bg-white border border-gray-200 text-gray-700 py-2 px-4 pr-8 rounded leading-tight focus:outline-none focus:shadow-outline"
+              id="option"
               value={option}
               onChange={handleChange}
             >
-              <option value=''>Seleccione una opción</option>
-              <option value='option1'>Calcular Función</option>
-              <option value='option2'>Biseccion</option>
-              <option value='option3'>Metodo Jacobi</option>
+              <option value="">Seleccione una opción</option>
+              <option value="option1">Calcular Función</option>
+              <option value="option2">Biseccion</option>
+              <option value="option3">Metodo Jacobi</option>
             </select>
-            <div className='pointer-events-none absolute inset-y-0 right-0 flex items-center px-2 text-gray-700'>
+            <div className="pointer-events-none absolute inset-y-0 right-0 flex items-center px-2 text-gray-700">
               <svg
-                className='fill-current h-4 w-4'
-                xmlns='http://www.w3.org/2000/svg'
-                viewBox='0 0 20 20'
+                className="fill-current h-4 w-4"
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 20 20"
               >
                 <path
-                  fillRule='evenodd'
-                  d='M14.95 7.95a1 1 0 01-1.414 0L10 4.414l-3.536 3.536a1 1 0 01-1.414-1.414l4-4a1 1 0 011.414 0l4 4a1 1 0 010 1.414z'
-                  clipRule='evenodd'
+                  fillRule="evenodd"
+                  d="M14.95 7.95a1 1 0 01-1.414 0L10 4.414l-3.536 3.536a1 1 0 01-1.414-1.414l4-4a1 1 0 011.414 0l4 4a1 1 0 010 1.414z"
+                  clipRule="evenodd"
                 />
               </svg>
             </div>
